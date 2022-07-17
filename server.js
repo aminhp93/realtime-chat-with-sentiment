@@ -31,9 +31,9 @@ app
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: true }));
 
-    server.get("*", (req, res) => {
-      return handler(req, res);
-    });
+    // server.get("*", (req, res) => {
+    //   return handler(req, res);
+    // });
 
     server.get("/list", (req, res, next) => {
       res.json({ ...chatHistory, status: "success" });
